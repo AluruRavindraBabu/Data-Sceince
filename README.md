@@ -1,3 +1,3 @@
 # Data-Sceince
 
-Data Scientists solved problems using data. :)
+Data Scientists solved problems using data.
