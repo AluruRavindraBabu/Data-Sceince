@@ -1,0 +1,14 @@
+Sentiment Analysis - Learn Python for Data Science #2
+
+1. Register for Twitter API
+2. Install Dependencies
+3. Write our script
+
+
+
+
+Sentiment Analysis Understanding and Extracting Feelings from Data
+
+An API lets you access an apps functionality from your code
+
+TextBlob is awesome for NLP tasks.
