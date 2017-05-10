@@ -1,0 +1,27 @@
+ Hierarchical_Clustering. (Slides for this and other Data Science courses may be found at github
+| https://github.com/DataScienceSpecialization/courses/. If you care to use them, they must be downloaded as a zip file and viewed
+| locally. This lesson corresponds to 04_ExploratoryAnalysis/hierarchicalClustering.)
+
+ In this lesson we'll learn about hierarchical clustering, a simple way of quickly examining and displaying multi-dimensional data.
+| This technique is usually most useful in the early stages of analysis when you're trying to get an understanding of the data,
+| e.g., finding some pattern or relationship between different factors or variables. As the name suggests hierarchical clustering
+| creates a hierarchy of clusters.
+
+| Clustering organizes data points that are close into groups. So obvious questions are "How do we define close?", "How do we group
+| things?", and "How do we interpret the grouping?" Cluster analysis is a very important topic in data analysis.
+
+| To give you an idea of what we're talking about, consider these random points we generated. We'll use them to demonstrate
+| hierarchical clustering in this lesson. We'll do this in several steps, but first we have to clarify our terms and concepts.
+
+| Hierarchical clustering is an agglomerative, or bottom-up, approach. From Wikipedia
+| (http://en.wikipedia.org/wiki/Hierarchical_clustering), we learn that in this method, "each observation starts in its own cluster,
+| and pairs of clusters are merged as one moves up the hierarchy." This means that we'll find the closest two points and put them
+| together in one cluster, then find the next closest pair in the updated picture, and so forth. We'll repeat this process until we
+| reach a reasonable stopping place.
+
+| Note the word "reasonable". There's a lot of flexibility in this field and how you perform your analysis depends on your problem.
+| Again, Wikipedia tells us, "one can decide to stop clustering either when the clusters are too far apart to be merged (distance
+| criterion) or when there is a sufficiently small number of clusters (number criterion)."
+
+
+(To be continued...... Work in progress.. )
