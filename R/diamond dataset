@@ -1,0 +1,64 @@
+ Run the R command str with the argument diamonds to see how the data looks like.
+
+str(diamonds)
+
+Classes ‘tbl_df’, ‘tbl’ and 'data.frame':	53940 obs. of  10 variables:
+ $ carat  : num  0.23 0.21 0.23 0.29 0.31 0.24 0.24 0.26 0.22 0.23 ...
+ $ cut    : Ord.factor w/ 5 levels "Fair"<"Good"<..: 5 4 2 4 2 3 3 3 1 3 ...
+ $ color  : Ord.factor w/ 7 levels "D"<"E"<"F"<"G"<..: 2 2 2 6 7 7 6 5 2 5 ...
+ $ clarity: Ord.factor w/ 8 levels "I1"<"SI2"<"SI1"<..: 2 3 5 4 2 6 7 3 4 5 ...
+ $ depth  : num  61.5 59.8 56.9 62.4 63.3 62.8 62.3 61.9 65.1 59.4 ...
+ $ table  : num  55 61 65 58 58 57 57 55 61 61 ...
+ $ price  : int  326 326 327 334 335 336 336 337 337 338 ...
+ $ x      : num  3.95 3.89 4.05 4.2 4.34 3.94 3.95 4.07 3.87 4 ...
+ $ y      : num  3.98 3.84 4.07 4.23 4.35 3.96 3.98 4.11 3.78 4.05 ...
+ $ z      : num  2.43 2.31 2.31 2.63 2.75 2.48 2.47 2.53 2.49 2.39 ...
+
+                                                                                                                                            |   6%
+
+| From the output,  10 characteristics of diamonds  and  53940 are characterized in this dataset
+
+Now let's plot a histogram of the price of the 53940 diamonds in this dataset.
+histogram requires only one variable of the data, so run the R command qplot with the first argument price and 
+the argument data set equal to diamonds. This will show the frequency of different diamond prices.
+
+ qplot(price, data=diamonds)
+ 
+  range(diamonds$price)
+[1]   326 18823
+
+
+ qplot(price, data=diamonds, binwidth=18497/30, fill=cut)
+ 
+ This shows how the counts within each price grouping (bin) are distributed among the different cuts of diamonds. Notice how qplot displays these
+| distributions relative to the cut legend on the right. The fair cut diamonds are at the bottom of each bin, the good cuts are above them, then the very
+| good above them, until the ideal cuts are at the top of each bin. You can quickly see from this display that there are very few fair cut diamonds priced
+| above $5000.
+
+...
+ Now we'll replot the histogram as a density function which will show the proportion of diamonds in each bin. This means that the shape will be similar
+ but the scale on the y-axis will be different since, by definition, the density function is nonnegative everywhere, and the area under the curve is one.
+
+To do this, simply call qplot with 3 arguments. The first 2 are price and data (set equal to diamonds). The third is geom which should be set equal to
+| the string "density". 
+
+
+qplot(price, data=diamonds, geom = "density")
+
+Notice that the shape is similar to that of the histogram we saw previously. The highest peak is close to 0 on the x-axis meaning that most of the
+| diamonds in the dataset were inexpensive. In general, as prices increase (move right along the x-axis) the number of diamonds (at those prices)
+| decrease. The exception to this is when the price is around $4000; there's a slight increase in frequency. Let's see if cut is responsible for this
+| increase.
+ Rerun qplot, this time with 4 arguments. The first 2 are the usual, and the third is geom set equal to "density". The fourth is color set equal to cut.
+
+
+> qplot(price, data=diamonds, geom = "density", color=cut)
+
+
+
+ See how easily qplot did this? Four of the five cuts have 2 peaks, one at price $1000 and the other between $4000 and $5000. The exception is the Fair
+ cut which has a single peak at $2500.
+ This gives little more understanding of the histogram which seen before.
+ Let's move on to scatterplots. For these we'll need to specify two variables from the diamond dataset.
+
+ Let's start with carat and price. Use these as the first 2 arguments of qplot. The third should be data set equal to the dataset. Try this now.
