@@ -1,0 +1,26 @@
+k-means clustering, another simple way of examining and organizing multi-dimensional data. 
+As with hierarchical clustering, this technique is most useful in the early stages of analysis 
+
+when you're trying to get an understanding of the data, 
+
+e.g., finding some pattern or relationship between different factors or variables.
+
+k-means method 
+"aims to partition the points into k groups such that the sum of squares from points to the assigned cluster centres is minimized."
+
+Since clustering organizes data points that are close into groups we'll assume we've decided on a measure of distance
+
+e.g., Euclidean.
+
+To illustrate the method, we'll use these random points we generated,
+familiar to you if you've already gone through the hierarchical clustering lesson.
+We'll demonstrate k-means clustering in several steps, but first we'll explain the general idea.
+
+As we said, k-means is a partioning approach which requires that you first guess how many clusters you have (or want).
+Once you fix this number, you randomly create a "centroid" (a phantom point) for each cluster and assign each point or observation in your dataset to the centroid to which it is
+closest. Once each point is assigned a centroid, you readjust the centroid's position by making it the average of the points assigned to it.
+
+
+
+K-means clustering requires you to specify a number of clusters before you begin.
+K-means clustering requires you NOT to specify a number of iterations before you begin.
