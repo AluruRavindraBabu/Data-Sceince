@@ -1,0 +1,11 @@
+Required Packages for this example:
+a) ‘fields’
+b) ‘jpeg’
+c) ‘datasets’
+
+
+In this example apply some of the analytic techniques that we learned to data from the University of California, Irvine.
+Specifically, the data we'll use is from UCI's Center for Machine Learning and Intelligent Systems. 
+You can find out more about the data at http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.
+As this address indicates, the data involves smartphones and recognizing human activity.
+
